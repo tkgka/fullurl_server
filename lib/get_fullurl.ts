@@ -1,6 +1,6 @@
 import { spawn } from 'child_process';
 
-export default async (url: any) => {
+export default async (url: string) => {
     return new Promise(function (resolve, reject) {
         let process = spawn('bash');
         const command = `curl --head ${url} | grep ocation`;

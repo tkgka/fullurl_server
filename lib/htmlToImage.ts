@@ -1,5 +1,5 @@
 import puppeteer from "puppeteer";
-export default async (html: any) => {
+export default async (html: string) => {
     const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.goto(html);
