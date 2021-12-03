@@ -18,7 +18,7 @@ router.get('/img', async (req, res, next) => {
     const imageBuffer = await htmlToImage(url);
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    res.set("Content-Type", "image/png");
+    res.set("Content-Type", "image/jpeg");
     res.send(imageBuffer);
 });
 module.exports = router;
